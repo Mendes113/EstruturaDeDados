@@ -43,16 +43,18 @@ public class VetorNotasNaoOtimizado implements Ivetor{
 		return true;
 	}
 
-	@Override
-	public boolean contem() {
-		// TODO Auto-generated method stub
-		throw new UnsupportedOperationException("Unimplemented method 'contem'");
-	}
+	
 
 	@Override
 	public boolean remove(double elem) {
 		// TODO Auto-generated method stub
 		throw new UnsupportedOperationException("Unimplemented method 'remove'");
+	}
+
+	@Override
+	public boolean contem(double elem) {
+		// TODO Auto-generated method stub
+		throw new UnsupportedOperationException("Unimplemented method 'contem'");
 	}
 
 }

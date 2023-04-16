@@ -18,6 +18,21 @@ public class App {
             lista.remove(a3);
             lista.imprime();
             System.out.println("Tamanho: " + lista.tamanho());
+
+            // para remover objeto deve se usar o mesmo objeto
+            System.out.println("Removendo o aluno 1");
+            lista.remove(a1);
+            lista.imprime();
+            System.out.println("Tamanho: " + lista.tamanho());
+
+
+            // busca usa string para encontrar objeto aluno
+           System.out.println(lista.busca("Pedro")); 
+
+        lista.insereInicio(1);
+        lista.insereFim(2);
+        lista.imprime();
+        System.out.println("Tamanho: " + lista.tamanho());
     
 
     }

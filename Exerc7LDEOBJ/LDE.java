@@ -7,6 +7,7 @@ public class LDE implements Lista {//TAD Lista duplamente encadeada
     }
 
     public void insereInicio(Object info) { //info = 5
+        if(info instanceof Aluno ){ 
         Noh novo = new Noh(info);
         if (inicio == null){
         inicio = novo;
@@ -14,13 +15,16 @@ public class LDE implements Lista {//TAD Lista duplamente encadeada
         }else {
         novo.setProx(inicio);
         inicio.setAnt(novo);
-        inicio = novo;
+        inicio = novo;}
+        }else {
+            System.out.println("Não é um aluno");}
         }
 
 
-        }
+        
         
     public void insereFim(Object info) {
+        if(info instanceof Aluno ){ 
         Noh novo = new Noh(info);
         if (inicio == null){
         inicio = novo;
@@ -29,7 +33,9 @@ public class LDE implements Lista {//TAD Lista duplamente encadeada
             novo.setAnt(fim);
             fim.setProx(novo);
             fim = novo;
-        }
+            
+        } }else {
+            System.out.println("Não é um aluno");}
 
 
 

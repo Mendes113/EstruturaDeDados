@@ -96,5 +96,25 @@ public class LDE implements Lista {//TAD Lista duplamente encadeada
         return false; // Retorna false se o elemento não foi encontrado
     
     }
+    @Override
+    public void insereInicio(Object info) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'insereInicio'");
+    }
+    @Override
+    public void insereFim(Object info) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'insereFim'");
+    }
+    @Override
+    public boolean remove(Object info) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'remove'");
+    }
+    @Override
+    public boolean busca(Object nome) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'busca'");
+    }
 
     }

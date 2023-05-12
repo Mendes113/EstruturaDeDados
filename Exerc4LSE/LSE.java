@@ -76,4 +76,16 @@ public class LSE implements Lista {
 
     }
 
+    @Override
+    public void imprime() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'imprime'");
+    }
+
+    @Override
+    public boolean busca(Object nome) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'busca'");
+    }
+
     }

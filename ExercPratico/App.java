@@ -12,16 +12,21 @@ public class App {
         System.out.println(fibonnaci.fibonacci(10));
 
         ListaEnc lista = new ListaEnc();
-        for(int i = 0; i < vetor1.length; i++){
-            lista.inserirFim(vetor1[i]);
-        }
-        System.out.println("Lista Encadeada");
-        System.out.println(lista.nroPares());
+        // for(int i = 0; i < vetor1.length; i++){
+        //     lista.inserirFim(vetor1[i]);
+        // }
+        // System.out.println("Lista Encadeada");
+        // System.out.println(lista.nroPares());
 
+
+        // quando usa os dois da conflito
         System.err.println("Lista Duplamente Encadeada");
         for(int i = 0; i < vetor1.length; i++){
             lista.addOrdenado((vetor1[i]));
-        }
+            
+            }
+           lista.imprimirOrdenado();
+
     }
 
 }

@@ -23,21 +23,26 @@ public class Vetor {
         return vetor2;
     }
 
-    public void intersecaoVetores(int []vetor, int [] vetor2){
-        int [] vetor3 = new int[vetor.length];
+    public void intersecaoVetores(int[] vetor, int[] vetor2) {
+        int maxSize = Math.min(vetor.length, vetor2.length);
+        int[] vetor3 = new int[maxSize];
         int cont = 0;
+    
         for (int i = 0; i < vetor.length; i++) {
             for (int j = 0; j < vetor2.length; j++) {
-                if(vetor[i] == vetor2[j]){
+                if (vetor[i] == vetor2[j]) {
                     vetor3[cont] = vetor[i];
                     cont++;
+                    break;  // Break the inner loop to avoid duplicate entries in vetor3
                 }
             }
         }
-        for (int i = 0; i < vetor3.length; i++) {
+    
+        for (int i = 0; i < cont; i++) {
             System.out.println(vetor3[i]);
         }
     }
+    
 
 
 }   

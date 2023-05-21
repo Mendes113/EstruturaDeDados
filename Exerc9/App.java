@@ -1,4 +1,4 @@
-package demo.src.main.java.com.example;
+
 public class App {
     public static void main(String[] args) {
         Vetor vetorObj = new Vetor();
@@ -57,9 +57,6 @@ public class App {
 
 
 
-
     }
-
-
 
 }

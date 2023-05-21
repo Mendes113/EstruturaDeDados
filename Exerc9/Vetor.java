@@ -7,7 +7,7 @@ public class Vetor {
         vetor = new int[1000];
         Random random = new Random();
         for (int i = 0; i < vetor.length; i++) {
-            vetor[i] = random.nextInt(500);
+            vetor[i] = random.nextInt(1000);
         }
         this.totalElem = vetor.length;
     }

@@ -42,6 +42,10 @@ public class Vetor {
             System.out.println(vetor3[i]);
         }
     }
+
+
+
+    
     
 
 

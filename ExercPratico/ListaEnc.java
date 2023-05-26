@@ -94,6 +94,30 @@ public class ListaEnc {
             atual = atual.getProximo();
         }
     }
+
+
+    public void imprimirRec() {
+        imprimirRec(this.primeiro);
+    }
+    
+    private void imprimirRec(Noh atual) {
+        if (atual != null) {
+            System.out.println(atual.getValor());
+            imprimirRec(atual.getProximo());
+        }
+    }   
+
+   public void concatenar(ListaEnc l2) {
+    if (this.primeiro == null) {
+        this.primeiro = l2.primeiro;
+        this.ultimo = l2.ultimo;
+    } else if (l2.primeiro != null) {
+        this.ultimo.setProximo(l2.primeiro);
+        l2.primeiro.setAnterior(this.ultimo);
+        this.ultimo = l2.ultimo;
+    }
+}
+
     
 
 }

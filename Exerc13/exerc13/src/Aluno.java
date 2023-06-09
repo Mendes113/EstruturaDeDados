@@ -24,7 +24,7 @@ public class Aluno {
     private int hash(int chave) {
         int index = chave % this.vetor.length;
         while (this.vetor[index] != null && this.vetor[index].getChave() != chave) {
-            index = (index + 1) % this.vetor.length;
+            index = reHash(index); // Chamada para o método reHash
         }
         return index;
     }
@@ -45,4 +45,14 @@ public class Aluno {
         this.vetor[hash] = null;
         return aluno;
     }
+
+
+    public int reHash(int chave) {
+        int index = chave % this.vetor.length;
+        while (this.vetor[index] != null) {
+            index = (index + 1) % this.vetor.length;
+        }
+        return index;
+    }
+    
 }

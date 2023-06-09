@@ -52,5 +52,15 @@ public class App {
         } else {
             System.out.println("Aluno não encontrado.");
         }
+
+        Aluno aluno11 = new Aluno("Joana", 111);
+        Aluno aluno12 = new Aluno("Pedro", 222);
+        Aluno aluno13 = new Aluno("Marcos", 333);
+        map.put(aluno11.getChave(), aluno11);
+        map.put(aluno12.getChave(), aluno12);
+        map.put(aluno13.getChave(), aluno13);
+
+        System.out.println("Tamanho do Map: " + map.size());
+
     }
 }

@@ -11,6 +11,12 @@ public class MapHashVetor {
 
     public void put(int chave, Aluno aluno) {
         int index = hash(chave);
+        if(index >= vetor.length){
+            int newSize = vetor.length * 2;
+            vetor = resize(vetor, newSize);
+        }
+
+           
         vetor[index] = aluno;
     }
 
@@ -31,5 +37,18 @@ public class MapHashVetor {
         vetor[index] = null;
         return aluno;
     }
+
+    private Aluno[] resize(Aluno[] vetor, int newSize) {
+        Aluno[] newVetor = new Aluno[newSize];
+        for (int i = 0; i < vetor.length; i++) {
+            newVetor[i] = vetor[i];
+        }
+        return newVetor;
+    }
+    
+    public int size(){
+        return vetor.length;
+    }
+    
 
 }

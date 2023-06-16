@@ -81,4 +81,16 @@ private boolean contains(Noh node, int element) {
     }
 }
 
+    public void imprimePreOrdem() {
+        imprimePreOrdem(this.raiz);
+    }
+
+    private void imprimePreOrdem(Noh node) {
+        if (node != null) {
+            System.out.println(node.valor);
+            imprimePreOrdem(node.esq);
+            imprimePreOrdem(node.dir);
+        }
+    }
+
 }

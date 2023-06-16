@@ -16,5 +16,8 @@ public class App {
         boolean result2 = arvore.contains(8);
 
         System.out.println(result2);
+
+
+        arvore.imprimePreOrdem();
     }
 }

@@ -43,6 +43,13 @@ func main(){
 	elapsedQuick := time.Since(startTimeQuick)
 	fmt.Printf("Tempo de execução: %v nanossegundos\n", elapsedQuick.Nanoseconds())
 	
+
+
+	fmt.Println("Ordenado merge sort")
+	startTimeMerge := time.Now()
+	fmt.Println(mergeSort(vet))
+	elapsedMerge := time.Since(startTimeMerge)
+	fmt.Printf("Tempo de execução: %v nanossegundos\n", elapsedMerge.Nanoseconds())
 }
 
 //buble sort
@@ -133,4 +140,43 @@ func quickSort(arr []int, low, high int) []int {
 
 func quickSortStart(arr []int) []int {
 	return quickSort(arr, 0, len(arr)-1) //call the quicksort function with low as 0 and high as the length of the array minus 1
+}
+
+
+func mergeSort(items []int ) []int{
+
+	if len(items) < 2 {
+		return items
+	}
+	first := mergeSort(items[:len(items)/2])
+	second := mergeSort(items[len(items)/2:])
+	return merge(first, second)
+
+}
+
+func merge(a []int, b []int )[]int{
+	final := []int{}
+
+	i, j := 0, 0
+
+	for i < len(a) && j < len(b) {
+		if a[i] > b[j] {
+			final = append(final , b[j])
+			j++
+		}else{
+			final = append(final , a[i])
+			i++
+		}
+		
+		
+		for; i < len(a); i++ {
+			final = append(final , a[i])
+		}
+		for; j < len(b); j++ {
+			final = append(final , b[j])
+		}
+
+		
+	}
+	return final
 }
